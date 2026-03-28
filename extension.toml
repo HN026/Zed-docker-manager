@@ -1,0 +1,72 @@
+id = "docker-manager"
+name = "Docker Manager"
+description = "Create and manage Docker containers directly from the Zed IDE using slash commands."
+version = "0.1.0"
+schema_version = 1
+authors = ["Huzaifa Naseer<huzaifanaseer026@gmail.com"]
+repository = "https://github.com/huzaifa/zed-docker-manager"
+
+[slash_commands.docker-ps]
+description = "List Docker containers (pass 'all' to include stopped containers)"
+requires_argument = false
+
+[slash_commands.docker-images]
+description = "List available Docker images"
+requires_argument = false
+
+[slash_commands.docker-start]
+description = "Start a stopped Docker container by name or ID"
+requires_argument = true
+
+[slash_commands.docker-stop]
+description = "Stop a running Docker container by name or ID"
+requires_argument = true
+
+[slash_commands.docker-rm]
+description = "Remove a Docker container by name or ID (pass '--force' to force removal)"
+requires_argument = true
+
+[slash_commands.docker-rmi]
+description = "Remove a Docker image by name or ID"
+requires_argument = true
+
+[slash_commands.docker-logs]
+description = "View logs for a Docker container (optionally pass '--tail N' to limit lines)"
+requires_argument = true
+
+[slash_commands.docker-run]
+description = "Run a new Docker container from an image (e.g. 'ubuntu:latest --name my-container -d')"
+requires_argument = true
+
+[slash_commands.docker-stats]
+description = "Show resource usage statistics for running containers"
+requires_argument = false
+
+[slash_commands.docker-inspect]
+description = "Inspect a Docker container and display its configuration"
+requires_argument = true
+
+[slash_commands.docker-compose-up]
+description = "Run docker compose up (pass '-d' for detached mode)"
+requires_argument = false
+
+[slash_commands.docker-compose-down]
+description = "Run docker compose down to stop and remove compose services"
+requires_argument = false
+
+[slash_commands.docker-exec]
+description = "Execute a command inside a running container (e.g. 'my-container ls -la')"
+requires_argument = true
+
+[slash_commands.docker-build]
+description = "Build a Docker image from a Dockerfile (e.g. '-t my-image .')"
+requires_argument = true
+
+[slash_commands.docker-pull]
+description = "Pull a Docker image from a registry (e.g. 'nginx:latest')"
+requires_argument = true
+
+[[capabilities]]
+kind = "process:exec"
+command = "docker"
+args = ["**"]
