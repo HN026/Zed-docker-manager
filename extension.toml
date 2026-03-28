@@ -70,3 +70,7 @@ requires_argument = true
 kind = "process:exec"
 command = "docker"
 args = ["**"]
+
+[docker-manager]
+submodule = "extensions/docker-manager"
+version = "0.1.0"
