@@ -42,7 +42,7 @@ The extension provides dynamic argument completions. When typing a command that 
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/huzaifa/zed-docker-manager.git
+   git clone https://github.com/HN026/Zed-docker-manager.git
    ```
 
 2. Open Zed and use the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`)

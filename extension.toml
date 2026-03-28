@@ -4,7 +4,7 @@ description = "Create and manage Docker containers directly from the Zed IDE usi
 version = "0.1.0"
 schema_version = 1
 authors = ["Huzaifa Naseer<huzaifanaseer026@gmail.com"]
-repository = "https://github.com/huzaifa/zed-docker-manager"
+repository = "https://github.com/HN026/Zed-docker-manager"
 
 [slash_commands.docker-ps]
 description = "List Docker containers (pass 'all' to include stopped containers)"
